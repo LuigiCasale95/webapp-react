@@ -7,14 +7,23 @@ import MoviePage from '../pages/MoviePage'
 /* Import layout */
 import DefaultLayout from '../layouts/DefaultLayout'
 
+// import degli elemnti React di gestione router
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function App() {
 
   return (
-    <>
-      <h1>PROVA</h1>
-    </>
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route element={<DefaultLayout />}>
+                        <Route index element={<HomePage />} />
+                        <Route path='/movies/:id' element={<MoviePage />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </>
   )
 }
 
