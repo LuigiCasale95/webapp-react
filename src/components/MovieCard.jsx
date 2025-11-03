@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const MovieCard = () => {
     return (
         <div className="card mb-4">
-            <img src="http://grupoalmuzara.com/libro/9788417954611_portada.jpg" alt="titolo libro" />
+            <img src="https://pad.mymovies.it/filmclub/2003/01/012/locandina.jpg" alt="titolo film" />
             <div className="card-body">
                 <h5 className="card-title">Titolo Film</h5>
                 <address><i>Regista</i></address>

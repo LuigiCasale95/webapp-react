@@ -1,3 +1,6 @@
+/* Import di movie card */
+import MovieCard from "../src/components/MovieCard"
+
 const HomePage = () => {
     return (
        <>
@@ -5,7 +8,7 @@ const HomePage = () => {
         <h2>Film per tutti</h2>
         <div className="row row-cols-3 mt-4">
             {/* Film qui */}
-            Qui andreanno i film
+            <MovieCard />
         </div>
        </>
     )
