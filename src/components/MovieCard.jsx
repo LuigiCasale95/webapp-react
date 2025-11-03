@@ -12,7 +12,7 @@ const MovieCard = () => {
                 <p className="card-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quam! Quaerat molestias autem hic neque quia quod asperiores, vel veniam mollitia repellat illo repudiandae praesentium qui deserunt velit adipisci explicabo!
                 </p>
-                <Link to="books/1" className="btn btn-primary">
+                <Link to="movies/1" className="btn btn-primary">
                     See more
                 </Link>
             </div>

@@ -9,6 +9,8 @@ const HomePage = () => {
         <div className="row row-cols-3 mt-4">
             {/* Film qui */}
             <MovieCard />
+            <MovieCard />
+            <MovieCard />
         </div>
        </>
     )
