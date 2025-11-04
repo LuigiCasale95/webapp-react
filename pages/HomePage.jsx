@@ -26,7 +26,7 @@ const HomePage = () => {
         return movies.map(movie => {
             return (
                 <div className="col" key={movie.id}>
-                    <MovieCard/>
+                    <MovieCard movieProp={movie}/>
                 </div>
             )
         })
