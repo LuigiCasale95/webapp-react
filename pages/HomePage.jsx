@@ -10,7 +10,7 @@ import MovieCard from "../src/components/MovieCard"
 const HomePage = () => {
 
     /* Variabile di stato per i film */
-    const [movies , setMovies] = useState();
+    const [movies , setMovies] = useState([]);
 
     // Funzione per richiesta axios
     const fecthMovies = () => {
@@ -18,7 +18,19 @@ const HomePage = () => {
         .then(res => {setMovies(res.data)})
         .catch(error => { console.log(error)})
     }
+    /* Avvio della chiamata a primo utilizzo del componente */
+    useEffect(fecthMovies,[]);
 
+    /* Funzione generazione instanze Film */
+    const renderMovie = () => {
+        return movies.map(movie => {
+            return (
+                <div className="col" key={movie.id}>
+                    <MovieCard/>
+                </div>
+            )
+        })
+    }
     
     return (
        <> 
@@ -26,9 +38,7 @@ const HomePage = () => {
         <h2>Film per tutti</h2>
         <div className="row row-cols-3 mt-4">
             {/* Film qui */}
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
+            {renderMovie()}
         </div>
        </>
     )
