@@ -6,6 +6,8 @@ import {Link, useParams, useNavigate} from "react-router-dom"
 /* Import della singola review */
 import ReviewCard from "../src/components/ReviewCard"
 
+import ReviewForm from "../src/components/RewiewsForm"
+
 const MoviePage = () => {
         // creiamo istanza di Navigate
     const redirect = useNavigate();
@@ -39,7 +41,7 @@ const MoviePage = () => {
             <header id="movie" className="border-bottom border-1 mb-3">
                 <h1>{movie?.title}</h1>
                 <h3 className="text-muted"><i> {movie?.director} </i></h3>
-                <p>lorem ipsm dolor sit amet</p>
+                <p>{movie?.abstract}</p>
             </header>
 
             <section id="reviews">
@@ -47,6 +49,9 @@ const MoviePage = () => {
                     <h4>Our community reviews</h4>
                 </header>
                 {renderReviews()}
+            </section>
+            <section>
+                <ReviewForm/>
             </section>
 
             <footer className="border-top border-1 pt-2 mb-3 d-flex justify-content-end">
