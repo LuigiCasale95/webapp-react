@@ -15,7 +15,7 @@ const MovieCard = ({movieProp}) => {
                 <p className="card-text">
                     {abstract}                    
                 </p>
-                <Link to="movies/1" className="btn btn-primary">
+                <Link to={`movies/${id}`} className="btn btn-primary">
                     See more
                 </Link>
             </div>
