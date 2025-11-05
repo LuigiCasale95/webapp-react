@@ -51,7 +51,7 @@ const MoviePage = () => {
                 {renderReviews()}
             </section>
             <section>
-                <ReviewForm/>
+                <ReviewForm idProp={id}/>
             </section>
 
             <footer className="border-top border-1 pt-2 mb-3 d-flex justify-content-end">

@@ -24,7 +24,7 @@ const ReviewForm = ({ idProp, reloadReviews }) => {
     }
 
     // creiamo la url corretta dell'endpoint richiesta
-    const apiUrl = `http://localhost:3000/api/books/${idProp}/reviews`;
+    const apiUrl = `http://localhost:3000/api/movies/${idProp}/reviews`;
 
     // funzione invio dati
     const handleSubmit = e => {
